@@ -1,4 +1,5 @@
-module shared
+module github.com/VladislavShklyarov/shared
+
 
 go 1.25.5
 
