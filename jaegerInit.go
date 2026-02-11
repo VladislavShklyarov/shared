@@ -2,7 +2,6 @@ package shared
 
 import (
 	"context"
-	shared "github.com/VladislavShklyarov/shared/config"
 	"time"
 
 	"go.opentelemetry.io/otel"
@@ -15,7 +14,7 @@ import (
 
 // InitJaegerOTEL инициализирует OpenTelemetry Jaeger TracerProvider
 // используя плоский конфиг config.JaegerConfig.
-func InitJaegerOTEL(cfg shared.JaegerConfig, logger *zap.Logger) (*sdktrace.TracerProvider, error) {
+func InitJaegerOTEL(cfg JaegerConfig, logger *zap.Logger) (*sdktrace.TracerProvider, error) {
 	logger.Info("Initializing OpenTelemetry Jaeger exporter (via Agent UDP)",
 		zap.String("agent_host", cfg.AgentHost),
 		zap.String("agent_port", cfg.AgentPort),
