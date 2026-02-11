@@ -1,4 +1,4 @@
-package config
+package shared
 
 type JaegerConfig struct {
 	ServiceName string
