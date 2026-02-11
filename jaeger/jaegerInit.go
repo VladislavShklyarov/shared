@@ -16,7 +16,7 @@ import (
 // InitJaegerOTEL инициализирует OpenTelemetry Jaeger TracerProvider
 // используя плоский конфиг config.JaegerConfig.
 func InitJaegerOTEL(cfg config.JaegerConfig, logger *zap.Logger) (*sdktrace.TracerProvider, error) {
-	logger.Info("Initializing OpenTelemetry Jaeger exporter (Agent UDP)",
+	logger.Info("Initializing OpenTelemetry Jaeger exporter (via Agent UDP)",
 		zap.String("agent_host", cfg.AgentHost),
 		zap.String("agent_port", cfg.AgentPort),
 		zap.String("service_name", cfg.ServiceName),
